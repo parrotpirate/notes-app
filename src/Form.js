@@ -32,14 +32,14 @@ class Form extends Component {
 
         return (
             <form onSubmit={this.onFormSubmit}>
-                <label>Title</label><br/>
+                <label htmlFor="title">Title</label><br/>
                 <input
                     type="text"
                     name="title"
                     id="title"
                     value={title}
                     onChange={this.handleChange} /><br/>
-                <label>Text</label><br/>
+                <label htmlFor="text">Text</label><br/>
                 <textarea
                     rows={10}
                     name="text"
