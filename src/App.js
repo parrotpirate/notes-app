@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from './Form';
+import NoteForm from './NoteForm';
 import NoteList from './NoteList';
 
 class App extends Component {
@@ -29,7 +29,7 @@ class App extends Component {
                 <h1>Notes</h1>
 
                 <div className="new-note">
-                    <Form handleSubmit={this.handleSubmit} />
+                    <NoteForm handleSubmit={this.handleSubmit} />
                 </div>
 
                 <div className="note-list-container">
