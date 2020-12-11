@@ -1,12 +1,12 @@
 import React from 'react'
 
 const NoteCards = (props) => {
-  const rows = props.characterData.map((row, index) => {
+  const rows = props.noteData.map((row, index) => {
     return (
       <div className="note-card" key={index}>
         <h3>{row.title}</h3>
         <p>{row.text}</p>
-        <button onClick={() => props.removeCharacter(index)}>Delete</button>
+        <button onClick={() => props.removeNote(index)}>Delete</button>
       </div>
     )
   })
@@ -15,10 +15,10 @@ const NoteCards = (props) => {
 }
 
 const NoteList = (props) => {
-    const {characterData, removeCharacter} = props
+    const {noteData, removeNote} = props
   return (
     <div className="note-list">
-      <NoteCards characterData={characterData} removeCharacter={removeCharacter}/>
+      <NoteCards noteData={noteData} removeNote={removeNote}/>
     </div>
    );
 }

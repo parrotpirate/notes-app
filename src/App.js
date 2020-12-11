@@ -4,25 +4,25 @@ import NoteList from './NoteList';
 
 class App extends Component {
     state = {
-        characters: []
+        notes: []
     };
 
-    removeCharacter = index => {
-        const { characters } = this.state;
+    removeNote = index => {
+        const { notes } = this.state;
 
         this.setState({
-            characters: characters.filter((character, i) => {
+            notes: notes.filter((note, i) => {
                 return i !== index;
             })
         });
     }
 
-    handleSubmit = character => {
-        this.setState({characters: [...this.state.characters, character]});
+    handleSubmit = note => {
+        this.setState({notes: [...this.state.notes, note]});
     }
 
     render() {
-        const { characters } = this.state;
+        const { notes } = this.state;
 
         return (
             <div className="container">
@@ -35,8 +35,8 @@ class App extends Component {
                 <div className="note-list-container">
                     <h2>Note List</h2>
                     <NoteList
-                        characterData={characters}
-                        removeCharacter={this.removeCharacter}
+                        noteData={notes}
+                        removeNote={this.removeNote}
                     />
                 </div>
             </div>
