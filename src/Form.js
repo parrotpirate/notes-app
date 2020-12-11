@@ -13,10 +13,10 @@ class Form extends Component {
     }
 
     handleChange = event => {
-        const { title, value } = event.target;
+        const { name, value } = event.target;
 
         this.setState({
-            [title] : value
+            [name] : value
         });
     }
 
@@ -40,9 +40,8 @@ class Form extends Component {
                     value={title}
                     onChange={this.handleChange} /><br/>
                 <label>Text</label><br/>
-                <input
-                    // rows={5}
-                    type="text"
+                <textarea
+                    rows={10}
                     name="text"
                     id="text"
                     value={text}
