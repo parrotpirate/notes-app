@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+/* import LowdbComponent from './ReactLowdb'; */
 
 class NoteForm extends Component {
+    
     constructor(props) {
         super(props);
 

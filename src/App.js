@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import NoteForm from './NoteForm';
 import NoteList from './NoteList';
+import LowdbComponent from './ReactLowdb';
 
-class App extends Component {
+class App extends LowdbComponent {
     state = {
         notes: []
     };
