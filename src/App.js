@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import NoteForm from './NoteForm';
-import NoteList from './NoteList';
-import LowdbComponent from './ReactLowdb';
+import React from 'react';
+import NoteForm from './noteform/noteform';
+import NoteList from './notelist/notelist';
+import LowdbComponent from './reacttolowdb';
 
 class App extends LowdbComponent {
     state = {
