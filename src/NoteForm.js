@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-/* import LowdbComponent from './ReactLowdb'; */
 
 class NoteForm extends Component {
     
