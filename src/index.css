@@ -12,3 +12,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   monospace;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container > h1 {
+  width: 100%;
+}
+
+.new-note {
+  width: 40%;
+}
+
+.new-note form {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.new-note form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.new-note form input,
+.new-note form textarea {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.note-list-container {
+  width: 60%;
+}

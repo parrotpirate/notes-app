@@ -1,26 +1,38 @@
-import React from 'react'
+import React, {Component} from 'react'
+import Note from '../note/note';
+import Grid from '@material-ui/core/Grid'
 
-const NoteCards = (props) => {
-  const rows = props.noteData.map((row, index) => {
-    return (
-      <div className="note-card" key={index}>
-        <h3>{row.title}</h3>
-        <p>{row.text}</p>
-        <button onClick={() => props.removeNote(index)}>Delete</button>
-      </div>
-    )
-  })
-
-  return <div>{rows}</div>
+class NoteList extends Component {
+  render() {
+    const {notes, selectedNoteIndex} = this.props; 
+    return ( 
+      <Grid
+      container
+      direction="row"
+      spacing={2}
+      justify="flex-start"
+      alignItems="flex-start">
+        {
+          notes.map((_note, _index) => {
+            return(
+              <Note
+              key={_index}
+              _note={_note}
+              _index={_index}
+              selectedNoteIndex={selectedNoteIndex}
+              selectNote={this.selectNote}
+              removeNote={this.removeNote}>
+              </Note>
+            )
+          })
+        }
+      </Grid>
+     );
+  }
+  
+  selectNote = (n, i) => this.props.selectNote(n, i);
+  removeNote = (note) => this.props.removeNote(note);
 }
-
-const NoteList = (props) => {
-    const {noteData, removeNote} = props
-  return (
-    <div className="note-list">
-      <NoteCards noteData={noteData} removeNote={removeNote}/>
-    </div>
-   );
-}
+ 
 
 export default NoteList;
